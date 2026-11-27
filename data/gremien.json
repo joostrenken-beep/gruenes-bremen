@@ -1,0 +1,880 @@
+{
+ "_hinweis": "Quelle: Webseiten des Landesverbands (Stand 27.11.2026). Private E-Mail-Adressen der LAG-Sprecher*innen sind bewusst NICHT übernommen – siehe Link. „kalender“ = Textbausteine, an denen Termine aus dem Grünen-Kalender diesem Gremium zugeordnet werden.",
+ "gremien": [
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "umwelt"
+   ],
+   "stichwoerter": [
+    "Naturschutz",
+    "Artenschutz",
+    "Biodiversität",
+    "Gewässer",
+    "Grundwasser",
+    "Grünfläche",
+    "Bäume",
+    "Weser"
+   ],
+   "beschreibung": "Umwelt- & Naturschutz, Biodiversität, Boden- und Wasserschutz in Bremen und Bremerhaven.",
+   "turnus": "",
+   "sprecher": [
+    "Beatrice Claus",
+    "Marten Urban"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Umwelt"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-umwelt",
+   "name": "LAG Umwelt"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "umwelt"
+   ],
+   "stichwoerter": [
+    "Klimaschutz",
+    "Klimaanpassung",
+    "Energie",
+    "Wärmewende",
+    "Wärmeplanung",
+    "Fernwärme",
+    "Solar",
+    "Windkraft",
+    "Wasserstoff",
+    "Stahlwerk",
+    "Hitze",
+    "Starkregen"
+   ],
+   "beschreibung": "Plattform für Klimaschutz und Energiepolitik in Bremen.",
+   "turnus": "",
+   "sprecher": [
+    "Carolina Herrera",
+    "Lennard Ender"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Klima & Energie"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-klima-energie",
+   "name": "LAG Klima & Energie"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "umwelt"
+   ],
+   "stichwoerter": [
+    "Mobilität",
+    "Verkehr",
+    "Radverkehr",
+    "Radweg",
+    "ÖPNV",
+    "BSAG",
+    "Straßenbahn",
+    "Tempo 30",
+    "Parkplätze"
+   ],
+   "beschreibung": "Klima- und umweltfreundliche Mobilität: ÖPNV, Rad- und Fußverkehr, Barrierefreiheit, Lärmschutz.",
+   "turnus": "",
+   "sprecher": [
+    "Nicole Ehnert",
+    "Max Lange"
+   ],
+   "kontakt": "lag-mobilitaet@gruene-bremen-lv.de",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Mobilität"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-mobilitaet",
+   "name": "LAG Mobilität"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "umwelt",
+    "politik"
+   ],
+   "stichwoerter": [
+    "Stadtentwicklung",
+    "Innenstadt",
+    "Wohnungsbau",
+    "Entsiegelung",
+    "Schwammstadt",
+    "Grünfläche",
+    "Versickerung",
+    "Regenwasser"
+   ],
+   "beschreibung": "Flächennutzungsplan, Wohnungsbau, Gewerbeflächen, Bau- und Stadtentwicklungspolitik.",
+   "turnus": "",
+   "sprecher": [
+    "Dominik Santner"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Stadt"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-stadtentwicklung",
+   "name": "LAG Stadt- & Regionalentwicklung"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Schule",
+    "Lehrkräfte",
+    "Unterricht",
+    "Ganztag",
+    "Inklusion",
+    "Bildung",
+    "Sprachförderung"
+   ],
+   "beschreibung": "Bildungspolitik; enger Austausch mit den bildungspolitischen Sprecher*innen der Fraktion.",
+   "turnus": "2. Dienstag im Monat, 19–21 Uhr",
+   "sprecher": [
+    "Marie Piper",
+    "Sabine Meyer-Pietruske"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Bildung"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-bildung",
+   "name": "LAG Bildung"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Kita",
+    "Kinderbetreuung",
+    "Kinder",
+    "Jugend",
+    "Familie",
+    "Eltern",
+    "Kinderarmut",
+    "Kinderschutz",
+    "Jugendhilfe",
+    "Spielplatz"
+   ],
+   "beschreibung": "Kinder- und Familienpolitik; Sitzungen nach Möglichkeit hybrid/online.",
+   "turnus": "",
+   "sprecher": [
+    "Johanna Kaysers",
+    "Joost Renken"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Kinder"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-kijufa",
+   "name": "LAG Kinder, Jugendliche & Familien"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Haushalt",
+    "Schuldenbremse",
+    "Sparkurs",
+    "Sparpaket",
+    "Finanzsenator",
+    "Finanzressort",
+    "Wirtschaft",
+    "Häfen"
+   ],
+   "beschreibung": "„Think tank“ grüner Wirtschafts- und Finanzpolitik, Reihe „nachhaltig wirtschaften – besser leben“.",
+   "turnus": "",
+   "sprecher": [
+    "Maya Dalby",
+    "Michael Schreiber"
+   ],
+   "kontakt": "lagwifi.hb@gmx.de",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Wirtschaft",
+    "LAG WiFi"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-wifi",
+   "name": "LAG Wirtschafts- & Finanzpolitik"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Bürgerbeteiligung",
+    "Petition",
+    "Beirat",
+    "Beiräte",
+    "Untersuchungsausschuss",
+    "Polizei",
+    "Demokratie"
+   ],
+   "beschreibung": "Direkte Demokratie, Innen- und Rechtspolitik.",
+   "turnus": "i. d. R. 2. Montag im Monat, 19 Uhr, hybrid",
+   "sprecher": [
+    "Kirsten Wiese",
+    "Gero Koßmann"
+   ],
+   "kontakt": "lag-idr@gruene-bremen-lv.de",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Demokratie"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-demokratie",
+   "name": "LAG Demokratie, Innen- & Rechtspolitik"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Armut",
+    "Sozial",
+    "Arbeit",
+    "Wohnungslos"
+   ],
+   "beschreibung": "Sozial- und Arbeitspolitik.",
+   "turnus": "",
+   "sprecher": [
+    "Vanessa Radtke",
+    "Ralf Bohr"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Soziales"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-soziales",
+   "name": "LAG Soziales & Arbeit"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Universität",
+    "Hochschule",
+    "Studierende",
+    "Wissenschaft"
+   ],
+   "beschreibung": "Grüne Hochschul- und Wissenschaftspolitik.",
+   "turnus": "",
+   "sprecher": [
+    "Hilke Brockmann",
+    "Christoph Schulte im Rodde"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Wissenschaft"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-wissenschaft",
+   "name": "LAG Wissenschaft & Hochschulen"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Krankenhaus",
+    "Pflege",
+    "Gesundheit",
+    "Hitzeschutz"
+   ],
+   "beschreibung": "Bremer Gesundheitspolitik, Krankenhäuser, Pflege.",
+   "turnus": "",
+   "sprecher": [
+    "Gabriele Graf",
+    "Jörg Hallensleben"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Gesundheit"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-gesundheit",
+   "name": "LAG Gesundheit"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Digital",
+    "Datenschutz",
+    "Medien"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Kerstin Biegemann",
+    "Martin Hagen"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Digitales"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-digitales",
+   "name": "LAG Digitales & Medien"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Europa",
+    "EU"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Helga Trüpel",
+    "Tobias Pinkel"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Europa"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-europa",
+   "name": "LAG Europa, Frieden & Internationales"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Frauen",
+    "Gleichstellung"
+   ],
+   "beschreibung": "",
+   "turnus": "i. d. R. 1. Donnerstag im Monat, 19 Uhr",
+   "sprecher": [
+    "Alina Schulte",
+    "Nele Gladbach"
+   ],
+   "kontakt": "lag-frauenpolitik@gruene-bremen-lv.de",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Frauenpolitik"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-frauen",
+   "name": "LAG Frauenpolitik"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Migration",
+    "Flucht",
+    "Geflüchtete",
+    "Integration"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Désirée Schwindenhammer",
+    "Karl-Henry Lahmann"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Migration"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-migration",
+   "name": "LAG Migration & Flucht"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Kultur",
+    "Theater",
+    "Museum"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Kseniia Kostareva",
+    "Daniel de Olano"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Kultur"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-kultur",
+   "name": "LAG Kultur"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "queer",
+    "CSD"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Bettina Tottleben",
+    "Lukas Brennecke"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Queer"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-queer",
+   "name": "LAG Queer"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Sport",
+    "Sportverein",
+    "Schwimmbad",
+    "Bäder"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Kerstin Spohler",
+    "Martin Reincke"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Sport"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-sport",
+   "name": "LAG Sport"
+  },
+  {
+   "typ": "LAG",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Tierschutz",
+    "Tiere"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [
+    "Insa Warms-Cangalovic",
+    "Robert Porzel"
+   ],
+   "kontakt": "lag.tierpolitik@gruene-bremen.de",
+   "link": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "kalender": [
+    "LAG Tierpolitik"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/landesarbeitsgemeinschaften/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen",
+   "id": "lag-tier",
+   "name": "LAG Tierpolitik"
+  },
+  {
+   "id": "kv-mitte",
+   "name": "Kreisverband Mitte/Östliche Vorstadt",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "kreisverband@gruene-bremen-mitte.de",
+   "link": "https://www.gruene-bremen-mitte.de",
+   "kalender": [
+    "Mitte/Östliche Vorstadt",
+    "MÖV",
+    "KV Mitte"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kv-ost",
+   "name": "Kreisverband Ost",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "kreisverband@gruene-bremen-ost.de",
+   "link": "https://gruene-bremen-ost.de/",
+   "kalender": [
+    "Ost",
+    "Bremen-Ost"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kv-ldw",
+   "name": "Kreisverband Links der Weser",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "kreisvorstand@gruene-linksderweser.de",
+   "link": "https://gruene-linksderweser.de/",
+   "kalender": [
+    "Links der Weser"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kv-nord",
+   "name": "Kreisverband Nord",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "kreisvorstand@gruene-bremen-nord.de",
+   "link": "http://www.gruene-bremen-nord.de/",
+   "kalender": [
+    "Nord",
+    "Bremen-Nord"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kv-nordost",
+   "name": "Kreisverband Nordost",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "info@gruene-bremen-nordost.de",
+   "link": "http://gruene-bremen-nordost.de",
+   "kalender": [
+    "Nordost"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kv-west",
+   "name": "Kreisverband West",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "info@gruene-bremen.de",
+   "link": "https://gruene-bremen.de/partei/gruen-vor-ort/kreisverband-west/",
+   "kalender": [
+    "West"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kv-bremerhaven",
+   "name": "Kreisverband Bremerhaven",
+   "typ": "Kreisverband",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt",
+    "Stadtteil"
+   ],
+   "beschreibung": "Lokale Parteiarbeit, Beiräte, Infostände, Wahlkampf vor Ort.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "kreisvorstand@gruene-bremerhaven.de",
+   "link": "https://gruene-bremerhaven.de/",
+   "kalender": [
+    "Bremerhaven"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruen-vor-ort/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "lmv",
+   "name": "Landesmitgliederversammlung",
+   "typ": "Mitgliederversammlung",
+   "themenfelder": [
+    "politik",
+    "umwelt",
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Bürgerschaftswahl",
+    "Wahlkampf",
+    "Koalition",
+    "Grüne"
+   ],
+   "beschreibung": "Höchstes Gremium des Landesverbands: Beschlüsse, Wahlen, Listenaufstellung.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "info@gruene-bremen.de",
+   "link": "https://gruene-bremen.de/termine/",
+   "kalender": [
+    "Landesmitgliederversammlung",
+    "LMV"
+   ],
+   "quelle_url": "https://gruene-bremen.de/termine/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "lavo",
+   "name": "Landesvorstand",
+   "typ": "Vorstand",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Grüne",
+    "Koalition",
+    "Bürgerschaftswahl"
+   ],
+   "beschreibung": "Koordiniert die politische Arbeit des Landesverbands. Sitzungen laut Tagesordnung im Grünen Netz.",
+   "turnus": "",
+   "sprecher": [
+    "Josephine Assmus",
+    "Marek Helsner"
+   ],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "kalender": [
+    "Landesvorstandssitzung"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "gj",
+   "name": "Grüne Jugend Bremen",
+   "typ": "Jugendverband",
+   "themenfelder": [
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Jugend",
+    "Jugendliche",
+    "Schüler",
+    "Ausbildung"
+   ],
+   "beschreibung": "Jugendorganisation der Grünen in Bremen.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "",
+   "link": "https://gjhb.de/",
+   "kalender": [
+    "Grüne Jugend"
+   ],
+   "quelle_url": "https://gruene-bremen.de/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "stadtteilgruppen",
+   "name": "Stadtteilgruppen & Stammtische",
+   "typ": "Stadtteilgruppe",
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Stadtteil",
+    "Ortsamt"
+   ],
+   "beschreibung": "Offene Treffen in den Stadtteilen – guter Einstieg, um lokale Themen (Beiräte!) aufzugreifen. Welcher Kreisverband zuständig ist, steht beim Termin.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/termine/",
+   "kalender": [
+    "Stadtteilgruppe",
+    "Stammtisch",
+    "Sprechstunde",
+    "Plauderstand",
+    "Klönschnack"
+   ],
+   "quelle_url": "https://gruene-bremen.de/termine/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "fraktionssitzung",
+   "name": "Fraktionssitzung (offen für Mitglieder)",
+   "typ": "Fraktion",
+   "themenfelder": [
+    "politik",
+    "umwelt",
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Bürgerschaft",
+    "Grüne"
+   ],
+   "beschreibung": "Die Grüne Bürgerschaftsfraktion lädt Mitglieder zu Fraktionssitzungen ein.",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "",
+   "link": "https://gruene-fraktion-bremen.de/",
+   "kalender": [
+    "Fraktionssitzung"
+   ],
+   "quelle_url": "https://gruene-bremen.de/termine/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "gruene-alte",
+   "name": "Grüne Alte",
+   "typ": "Arbeitsgruppe",
+   "themenfelder": [],
+   "stichwoerter": [
+    "Senior"
+   ],
+   "beschreibung": "",
+   "turnus": "",
+   "sprecher": [],
+   "kontakt": "",
+   "link": "https://gruene-bremen.de/partei/gruene-alte/",
+   "kalender": [
+    "Grüne Alte"
+   ],
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-alte/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  }
+ ]
+}

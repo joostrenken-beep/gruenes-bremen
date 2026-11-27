@@ -1,0 +1,480 @@
+{
+ "_hinweis": "Nur öffentliche, offizielle Angaben. Die E-Mail-Adressen der Abgeordneten sind auf der Fraktionsseite verschlüsselt (Spam-Schutz) und deshalb hier leer – bitte über das Profil nachsehen und bei Bedarf selbst eintragen. Alle Einträge: bitte prüfen.",
+ "kontakte": [
+  {
+   "id": "dr-emanuel-herold",
+   "name": "Dr. Emanuel Herold",
+   "rolle": "Fraktionsvorsitzender (MdBB)",
+   "fachgebiete": [
+    "Wirtschaft",
+    "Häfen/Fischerei/Schifffahrt",
+    "Europapolitik",
+    "Entwicklungszusammenarbeit"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Wirtschaft",
+    "Häfen",
+    "Koalition",
+    "Haushalt"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/dr-emanuel-herold",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "dr-solveig-eschen",
+   "name": "Dr. Solveig Eschen",
+   "rolle": "stv. Fraktionsvorsitzende (MdBB)",
+   "fachgebiete": [
+    "Arbeitsmarktpolitik",
+    "Geschlechterpolitik",
+    "Öffentlicher Dienst"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Arbeit",
+    "Frauen",
+    "Gleichstellung"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/dr-solveig-eschen",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "philipp-bruck",
+   "name": "Philipp Bruck",
+   "rolle": "Abgeordneter (MdBB)",
+   "fachgebiete": [
+    "Haushalt und Finanzen",
+    "Klima- und Energiepolitik",
+    "Tierpolitik"
+   ],
+   "themenfelder": [
+    "politik",
+    "umwelt"
+   ],
+   "stichwoerter": [
+    "Haushalt",
+    "Schuldenbremse",
+    "Sparkurs",
+    "Klimaschutz",
+    "Energie",
+    "Wärmewende",
+    "Fernwärme",
+    "Solar",
+    "Stahlwerk"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/philipp-bruck",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "sahhanim-goergue-philipp",
+   "name": "Sahhanim Görgü-Philipp",
+   "rolle": "Abgeordnete (MdBB)",
+   "fachgebiete": [
+    "Soziales",
+    "Integration",
+    "Jugendpolitik",
+    "Senior*innen",
+    "Behindertenpolitik"
+   ],
+   "themenfelder": [
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Jugend",
+    "Jugendliche",
+    "Jugendhilfe",
+    "Sozial",
+    "Integration"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/sahhanim-goergue-philipp",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "michael-labetzke",
+   "name": "Michael Labetzke",
+   "rolle": "Abgeordneter (MdBB)",
+   "fachgebiete": [
+    "Bremerhavenpolitik",
+    "Innenpolitik",
+    "Rechtspolitik"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Bremerhaven",
+    "Polizei"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/michael-labetzke",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "bithja-menzel",
+   "name": "Bithja Menzel",
+   "rolle": "Abgeordnete (MdBB)",
+   "fachgebiete": [
+    "Bau und Stadtentwicklung",
+    "Ernährung",
+    "Landwirtschaft",
+    "Beiräte",
+    "Bürgerbeteiligung",
+    "Petitionen"
+   ],
+   "themenfelder": [
+    "politik",
+    "umwelt"
+   ],
+   "stichwoerter": [
+    "Stadtentwicklung",
+    "Wohnungsbau",
+    "Innenstadt",
+    "Beirat",
+    "Beiräte",
+    "Bürgerbeteiligung",
+    "Petition",
+    "Entsiegelung",
+    "Schwammstadt"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/bithja-menzel",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "ralph-saxe",
+   "name": "Ralph Saxe",
+   "rolle": "Vizepräsident der Bürgerschaft (MdBB)",
+   "fachgebiete": [
+    "Umwelt",
+    "Verkehr",
+    "Gesundheitspolitik",
+    "Pflege",
+    "Beiräte",
+    "Demokratie"
+   ],
+   "themenfelder": [
+    "umwelt",
+    "politik"
+   ],
+   "stichwoerter": [
+    "Umwelt",
+    "Verkehr",
+    "Mobilität",
+    "Radverkehr",
+    "ÖPNV",
+    "Naturschutz",
+    "Gewässer",
+    "Abwasser",
+    "Starkregen",
+    "Beirat",
+    "Beiräte",
+    "Grünfläche"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/ralph-saxe",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "dr-maike-schaefer",
+   "name": "Dr. Maike Schaefer",
+   "rolle": "Abgeordnete (MdBB)",
+   "fachgebiete": [
+    "Bremen-Nord",
+    "Verbraucherschutz",
+    "Rechnungsprüfung und Controlling"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Bremen-Nord",
+    "Vegesack",
+    "Blumenthal"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/dr-maike-schaefer",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "dr-franziska-tell",
+   "name": "Dr. Franziska Tell",
+   "rolle": "Abgeordnete (MdBB)",
+   "fachgebiete": [
+    "Bildungspolitik",
+    "Wissenschaft",
+    "Kinderpolitik",
+    "Datenschutz",
+    "Digitales",
+    "Medienpolitik"
+   ],
+   "themenfelder": [
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Schule",
+    "Kita",
+    "Kinder",
+    "Bildung",
+    "Lehrkräfte",
+    "Unterricht",
+    "Kinderbetreuung",
+    "Hochschule"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/dr-franziska-tell",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "cindi-tuncel",
+   "name": "Cindi Tuncel",
+   "rolle": "Abgeordneter (MdBB)",
+   "fachgebiete": [
+    "Migration",
+    "Sport",
+    "Religion"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Migration",
+    "Sport",
+    "Integration"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/cindi-tuncel",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kai-wargalla",
+   "name": "Kai Wargalla",
+   "rolle": "Abgeordnete (MdBB)",
+   "fachgebiete": [
+    "Queer",
+    "Kulturpolitik",
+    "Innenpolitik (Stadt)",
+    "Antifaschismus/Strategien gegen Rechtsextremismus"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Kultur",
+    "Rechtsextremismus",
+    "queer"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-fraktion-bremen.de/personen/abgeordnete/kai-wargalla",
+   "quelle_url": "https://gruene-fraktion-bremen.de/personen/abgeordnete",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "henrike-mueller",
+   "name": "Henrike Müller",
+   "rolle": "Senatorin für Umwelt, Klima und Wissenschaft",
+   "fachgebiete": [
+    "Umwelt",
+    "Klima",
+    "Wissenschaft"
+   ],
+   "themenfelder": [
+    "umwelt",
+    "bildung"
+   ],
+   "stichwoerter": [
+    "Umwelt",
+    "Klimaschutz",
+    "Klimaanpassung",
+    "Starkregen",
+    "Hitze",
+    "Gewässer",
+    "Abwasser",
+    "Grünfläche",
+    "Naturschutz",
+    "Hochschule",
+    "Universität"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "bjoern-fecker",
+   "name": "Björn Fecker",
+   "rolle": "Bürgermeister, Senator für Finanzen",
+   "fachgebiete": [
+    "Finanzen",
+    "Haushalt"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Haushalt",
+    "Schuldenbremse",
+    "Sparkurs",
+    "Finanzsenator"
+   ],
+   "email": "",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "josephine-assmus",
+   "name": "Josephine Assmus",
+   "rolle": "Landesvorstandssprecherin",
+   "fachgebiete": [
+    "Neumitglieder-Einbindung",
+    "Vielfalt & Diversität",
+    "Gleichstellung/Frauenpolitik",
+    "KV Mitte/Östliche Vorstadt"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Grüne",
+    "Bürgerschaftswahl"
+   ],
+   "email": "josephine.assmus@gruene-bremen.de",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "marek-helsner",
+   "name": "Marek Helsner",
+   "rolle": "Landesvorstandssprecher",
+   "fachgebiete": [
+    "Neumitglieder-Einbindung",
+    "KV Nordost"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Grüne",
+    "Bürgerschaftswahl"
+   ],
+   "email": "marek.helsner@gruene-bremen.de",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "karin-mathes",
+   "name": "Karin Mathes",
+   "rolle": "Beisitzerin im Landesvorstand",
+   "fachgebiete": [
+    "Beiräte",
+    "KV Nordost"
+   ],
+   "themenfelder": [
+    "politik"
+   ],
+   "stichwoerter": [
+    "Beirat",
+    "Beiräte",
+    "Ortsamt"
+   ],
+   "email": "karin.mathes@gruene-bremen.de",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "elisabeth-lass",
+   "name": "Elisabeth Laß",
+   "rolle": "Beisitzerin im Landesvorstand",
+   "fachgebiete": [
+    "Landesarbeitsgemeinschaften",
+    "KV Ost"
+   ],
+   "themenfelder": [
+    "politik",
+    "umwelt",
+    "bildung"
+   ],
+   "stichwoerter": [],
+   "email": "elisabeth.lass@gruene-bremen.de",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  },
+  {
+   "id": "kappert-gonther",
+   "name": "Kirsten Kappert-Gonther",
+   "rolle": "Bundestagsabgeordnete (Gesundheit)",
+   "fachgebiete": [
+    "Gesundheit"
+   ],
+   "themenfelder": [],
+   "stichwoerter": [
+    "Gesundheit",
+    "Krankenhaus",
+    "Hitzeschutz"
+   ],
+   "email": "kirsten.kappert-gonther@bundestag.de",
+   "telefon": "",
+   "profil": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "quelle_url": "https://gruene-bremen.de/partei/gruene-koepfe/",
+   "stand": "2026-11-27",
+   "status": "bitte prüfen"
+  }
+ ]
+}

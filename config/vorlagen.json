@@ -1,0 +1,26 @@
+{
+  "_hinweis": "Platzhalter: {titel} {quelle} {link} {datum} {teaser} {themenfeld} {treffer} {hashtags} {name} {fachprofil} {rolle} {gremium}. Texte in [eckigen Klammern] sind Stellen, die du selbst ausfüllst.",
+  "vorlagen": [
+    {
+      "id": "linkedin",
+      "name": "LinkedIn-Post",
+      "text": "{titel}\n\n[Ein Satz, warum dich das Thema bewegt.]\n\nAls {fachprofil} sehe ich hier vor allem einen Punkt: [deine fachliche Einordnung – konkret, mit einem Beispiel aus der Praxis].\n\nWas Bremen jetzt braucht:\n• [Vorschlag 1]\n• [Vorschlag 2]\n\nWie seht ihr das?\n\nQuelle: {quelle} – {link}\n\n{hashtags}"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram-Text",
+      "text": "{titel} 💚\n\n[Kurz und persönlich: Was heißt das für Menschen in Bremen?]\n\nMein Blick als {fachprofil}: [ein Satz].\n\n👉 Mehr dazu: {quelle} (Link in Bio)\n\n{hashtags} #Bremen #Grüne"
+    },
+    {
+      "id": "leserbrief",
+      "name": "Leserbrief",
+      "text": "Betr.: „{titel}“ ({quelle}, {datum})\n\nSehr geehrte Damen und Herren,\n\n[Einstieg: worauf Sie sich beziehen und Ihre Kernaussage in einem Satz.]\n\nAls {fachprofil} möchte ich ergänzen: [fachliches Argument, möglichst mit Bremer Beispiel].\n\n[Konkreter Vorschlag oder Forderung.]\n\nMit freundlichen Grüßen\n{name}, Bremen"
+    },
+    {
+      "id": "intern",
+      "name": "Interne Partei-Diskussion",
+      "text": "Liebe Freund*innen,\n\nzu „{titel}“ ({quelle}, {datum}): {link}\n\nKurz zusammengefasst: {teaser}\n\nAus meiner Sicht als {fachprofil}:\n• [Einschätzung 1]\n• [Einschätzung 2]\n\nVorschlag: Sollten wir das Thema in der {gremium} aufgreifen bzw. eine Position dazu entwickeln? Ich bringe mich gerne ein.\n\nGrüne Grüße\n{name}"
+    }
+  ],
+  "claudePrompt": "Du hilfst mir, mich als Mitglied von Bündnis 90/Die Grünen in Bremen fachlich fundiert in eine aktuelle Debatte einzubringen.\n\nÜber mich: {name}, {fachprofil}. {rolle}\n\nDie Meldung:\n- Titel: {titel}\n- Quelle: {quelle}, {datum}\n- Link: {link}\n- Teaser: {teaser}\n- Themenfeld: {themenfeld}\n- Stichwörter: {treffer}\n\nAufgabe:\n1. Ordne kurz ein, worum es geht und welche Rolle Senat, Bürgerschaft und Koalition (Rot-Grün-Rot) dabei spielen. Kennzeichne, was du nicht sicher weißt.\n2. Nenne 2–3 Punkte, die ich aus meiner fachlichen Perspektive beitragen kann.\n3. Schreibe einen Entwurf für: [LinkedIn-Post / Leserbrief / Beitrag für die interne Diskussion in der {gremium}] – sachlich, konstruktiv, max. 1.200 Zeichen, auf Deutsch.\n4. Schlage eine konkrete nächste Aktion vor (z. B. Gremium, Ansprechperson, Antrag).\n\nBitte lies den Originalartikel über den Link, falls du Zugriff hast, und erfinde keine Fakten oder Zitate."
+}

@@ -1,0 +1,677 @@
+{
+ "stand": "2026-11-27T23:18:41.658Z",
+ "quellen": [
+  {
+   "id": "gruene-lv-termine",
+   "name": "Grüne Bremen – Termine",
+   "ok": true,
+   "anzahl": 83
+  }
+ ],
+ "termine": [
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-3/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2026-11-30T18:00:00",
+   "ende": "2026-11-30T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-woltmershausen-2/",
+   "ort": "Boulderbase (Am Tabakquartier 14, 28917 Bremen)",
+   "titel": "Stadtteilgruppe Woltmershausen",
+   "start": "2026-11-30T19:00:00",
+   "ende": "2026-11-30T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-schwachhausen-4/",
+   "ort": "Gondel",
+   "titel": "Stadtteilgruppe Schwachhausen",
+   "start": "2026-11-30T19:00:00",
+   "ende": "2026-11-30T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-sport/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Sport",
+   "start": "2026-11-30T19:00:00",
+   "ende": "2026-11-30T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreismitgliederversammlung-bremen-ost-3/",
+   "ort": "Bürgerhaus Hemelingen (Raum Hemelingen), Godehardstr. 4, 28309 Bremen",
+   "titel": "Kreismitgliederversammlung Bremen-Ost",
+   "start": "2026-12-02T19:00:00",
+   "ende": "2026-12-02T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-umwelt-3/",
+   "ort": "tba",
+   "titel": "LAG Umwelt",
+   "start": "2026-12-03T17:30:00",
+   "ende": "2026-12-03T19:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-vahr-4/",
+   "ort": "Ort auf Nachfrage",
+   "titel": "Stadtteilgruppe Vahr",
+   "start": "2026-12-03T18:00:00",
+   "ende": "2026-12-03T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-3/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2026-12-03T18:30:00",
+   "ende": "2026-12-03T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-kultur/",
+   "ort": "Bremer Presseclub, Schnoor",
+   "titel": "LAG Kultur",
+   "start": "2026-12-03T18:30:00",
+   "ende": "2026-12-03T20:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-frauenpolitik-6/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Frauenpolitik",
+   "start": "2026-12-03T19:00:00",
+   "ende": "2026-12-03T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-kinder-jugend-familie/",
+   "ort": "Paulaners am Wehrschloss, Hastedter Osterdeich 230",
+   "titel": "LAG Kinder, Jugend & Familie",
+   "start": "2026-12-03T19:30:00",
+   "ende": "2026-12-03T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/jahresausklang-bremerhaven/",
+   "ort": "Grünes Büro Bremerhaven",
+   "titel": "Jahresausklang Bremerhaven",
+   "start": "2026-12-04T16:00:00",
+   "ende": "2026-12-04T18:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-10/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2026-12-07T18:00:00",
+   "ende": "2026-12-07T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-klima-energie-8/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Klima & Energie",
+   "start": "2026-12-07T19:00:00",
+   "ende": "2026-12-07T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-groepelingen-5/",
+   "ort": "Treff am Liegnitzplatz (Liegnitzstraße 43, 28237 Bremen)",
+   "titel": "Stadtteilgruppe Gröpelingen",
+   "start": "2026-12-07T19:30:00",
+   "ende": "2026-12-07T20:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-hemelingen-6/",
+   "ort": "Bürgerhaus Hemelingen, Godehardstr. 4, im Raum Hastedt im Erdgeschoss",
+   "titel": "Stadtteilgruppe Hemelingen",
+   "start": "2026-12-08T19:00:00",
+   "ende": "2026-12-08T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-tierpolitik-2/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Tierpolitik",
+   "start": "2026-12-08T19:00:00",
+   "ende": "2026-12-08T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-europa-frieden-internationales/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Europa, Frieden & Internationales",
+   "start": "2026-12-08T19:30:00",
+   "ende": "2026-12-08T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-alte-5/",
+   "ort": "Grüne Landesgeschäftsstelle, 1. OG",
+   "titel": "Grüne Alte",
+   "start": "2026-12-09T15:00:00",
+   "ende": "2026-12-09T17:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-4/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2026-12-10T18:30:00",
+   "ende": "2026-12-10T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-bildung-2/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Bildung",
+   "start": "2026-12-10T19:00:00",
+   "ende": "2026-12-10T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-findorff-18/",
+   "ort": "fif-café, Herbststraße 83",
+   "titel": "Stadtteilgruppe Findorff",
+   "start": "2026-12-10T19:00:00",
+   "ende": "2026-12-10T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/weihnachtsfeier-kreiserband-links-der-weser/",
+   "ort": "Klub-Dialog, Am Deich 66, 28199 Bremen",
+   "titel": "Weihnachtsfeier Kreiserband Links der Weser",
+   "start": "2026-12-11T18:00:00",
+   "ende": "2026-12-11T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/plauderstand-links-der-weser/",
+   "ort": "Westerstr. vor dem Rewe",
+   "titel": "Plauderstand Links der Weser",
+   "start": "2026-12-12T11:00:00",
+   "ende": "2026-12-12T13:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreisvorstandssitzung-west-3/",
+   "ort": "Ort auf Anfrage",
+   "titel": "Kreisvorstandssitzung West",
+   "start": "2026-12-14T00:00:00",
+   "ende": "2026-12-15T00:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/einladung-zur-fraktionssitzung-am-14-dezember-2026/",
+   "ort": "Haus der Bürgerschaft, Am Markt 20, 28195 Bremen",
+   "titel": "Einladung zur Fraktionssitzung am 14. Dezember 2026",
+   "start": "2026-12-14T16:30:00",
+   "ende": "2026-12-14T18:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-11/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2026-12-14T18:00:00",
+   "ende": "2026-12-14T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-queer/",
+   "ort": "Grüne Landesgeschäftsstelle / hybrid",
+   "titel": "LAG Queer",
+   "start": "2026-12-15T19:00:00",
+   "ende": "2026-12-15T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-waermesprechstunde-moev-2/",
+   "ort": "Grünes Büro MÖV, Hamburger Str. 39",
+   "titel": "Grüne Wärmesprechstunde MÖV",
+   "start": "2026-12-16T17:30:00",
+   "ende": "2026-12-16T19:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruenschnack-bremerhaven-3/",
+   "ort": "Grünes Büro Bremerhaven",
+   "titel": "Grünschnack Bremerhaven",
+   "start": "2026-12-16T18:00:00",
+   "ende": "2026-12-16T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-osterholz/",
+   "ort": "Gemeinschaftsraum des Wohnprojektes Casa Colorida, Pawel-Adamowicz-Straße 19, 28327 Bremen",
+   "titel": "Stadtteilgruppe Osterholz",
+   "start": "2026-12-16T18:00:00",
+   "ende": "2026-12-16T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-wissenschaft-hochschulen/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Wissenschaft & Hochschulen",
+   "start": "2026-12-16T18:00:00",
+   "ende": "2026-12-16T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-walle-3/",
+   "ort": "jetzt hier, Konsul-Smidt-Straße 38, 28217 Bremen",
+   "titel": "Stadtteilgruppe Walle",
+   "start": "2026-12-16T19:00:00",
+   "ende": "2026-12-16T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-horn-lehe/",
+   "ort": "Andreasgemeinde in Horn-Lehe",
+   "titel": "Stadtteilgruppe Horn-Lehe",
+   "start": "2026-12-16T19:00:00",
+   "ende": "2026-12-16T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-5/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2026-12-17T18:30:00",
+   "ende": "2026-12-17T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreisvorstandssitzung-links-der-weser-5/",
+   "ort": "Ort auf Nachfrage",
+   "titel": "Kreisvorstandssitzung Links der Weser",
+   "start": "2026-12-17T19:00:00",
+   "ende": "2026-12-17T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-wirtschaft-finanzen-2/",
+   "ort": "tbd",
+   "titel": "LAG Wirtschaft & Finanzen",
+   "start": "2026-12-17T19:00:00",
+   "ende": "2026-12-17T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-wissenschaft-hochschulen-3/",
+   "ort": "tba",
+   "titel": "LAG Wissenschaft & Hochschulen",
+   "start": "2026-12-17T20:00:00",
+   "ende": "2026-12-17T22:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-2/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2026-12-21T18:00:00",
+   "ende": "2026-12-21T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-burglesum-5/",
+   "ort": "Sitzungssaal des Ortsamts Burglesum",
+   "titel": "Stadtteilgruppe Burglesum",
+   "start": "2026-12-21T19:30:00",
+   "ende": "2026-12-21T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-6/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2026-12-24T18:30:00",
+   "ende": "2026-12-24T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-12/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2026-12-28T18:00:00",
+   "ende": "2026-12-28T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-7/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2026-12-31T18:30:00",
+   "ende": "2026-12-31T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-4/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2027-01-04T18:00:00",
+   "ende": "2027-01-04T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-klima-energie-2/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Klima & Energie",
+   "start": "2027-01-04T19:00:00",
+   "ende": "2027-01-04T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-8/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2027-01-07T18:30:00",
+   "ende": "2027-01-07T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-5/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2027-01-11T18:00:00",
+   "ende": "2027-01-11T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-horn-lehe-2/",
+   "ort": "Andreasgemeinde in Horn-Lehe",
+   "titel": "Stadtteilgruppe Horn-Lehe",
+   "start": "2027-01-11T19:00:00",
+   "ende": "2027-01-11T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreismitgliederversammlung-west-2/",
+   "ort": "Ort folgt",
+   "titel": "Beiratslistenaufstellung West",
+   "start": "2027-01-13T19:00:00",
+   "ende": "2027-01-13T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-9/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2027-01-14T18:30:00",
+   "ende": "2027-01-14T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreisvorstandssitzung-links-der-weser-6/",
+   "ort": "Ort auf Nachfrage",
+   "titel": "Kreisvorstandssitzung Links der Weser",
+   "start": "2027-01-14T19:00:00",
+   "ende": "2027-01-14T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-wirtschaft-finanzen-3/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Wirtschaft & Finanzen",
+   "start": "2027-01-14T19:00:00",
+   "ende": "2027-01-14T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreismitgliederversammlung-bremerhaven-2/",
+   "ort": "Grünes Büro Bremerhaven",
+   "titel": "Kreismitgliederversammlung Bremerhaven",
+   "start": "2027-01-15T11:00:00",
+   "ende": "2027-01-15T16:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-6/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2027-01-18T18:00:00",
+   "ende": "2027-01-18T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-europa-frieden-internationales-3/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Europa, Frieden & Internationales",
+   "start": "2027-01-19T19:30:00",
+   "ende": "2027-01-19T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-umwelt-5/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Umwelt",
+   "start": "2027-01-20T17:30:00",
+   "ende": "2027-01-20T19:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stadtteilgruppe-osterholz-2/",
+   "ort": "Gemeinschaftsraum des Wohnprojektes Casa Colorida, Pawel-Adamowicz-Straße 19, 28327 Bremen",
+   "titel": "Stadtteilgruppe Osterholz",
+   "start": "2027-01-20T18:00:00",
+   "ende": "2027-01-20T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/beiratslistenaufstellung-links-der-weser/",
+   "ort": "Ort folgt",
+   "titel": "Beiratslistenaufstellung Links der Weser",
+   "start": "2027-01-20T19:00:00",
+   "ende": "2027-01-20T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/stammtisch-horn-lehe/",
+   "ort": "Oililio",
+   "titel": "Stammtisch Horn-Lehe",
+   "start": "2027-01-20T19:00:00",
+   "ende": "2027-01-20T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-10/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2027-01-21T18:30:00",
+   "ende": "2027-01-21T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/wahlversammlung-bremerhaven/",
+   "ort": "Grünes Büro Bremerhaven",
+   "titel": "Wahlversammlung Bremerhaven",
+   "start": "2027-01-23T11:00:00",
+   "ende": "2027-01-23T18:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-7/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2027-01-25T18:00:00",
+   "ende": "2027-01-25T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/beiratslistenaufstellung-mitte-oestliche-vorstadt/",
+   "ort": "Bürgerhaus Weserterrassen",
+   "titel": "Beiratslistenaufstellung Mitte/Östliche Vorstadt",
+   "start": "2027-01-26T19:00:00",
+   "ende": "2027-01-26T22:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kloenschnack-links-der-weser/",
+   "ort": "Kukoon",
+   "titel": "Klönschnack Links der Weser",
+   "start": "2027-01-27T19:00:00",
+   "ende": "2027-01-27T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-digitales-medien/",
+   "ort": "Grüne Landesgeschäftsstelle / hybrid",
+   "titel": "LAG Digitales & Medien",
+   "start": "2027-01-27T19:30:00",
+   "ende": "2027-01-27T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend-11/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2027-01-28T18:30:00",
+   "ende": "2027-01-28T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/landesvorstandssitzung-8/",
+   "ort": "Siehe Tagesordnung im Grünen Netz",
+   "titel": "Landesvorstandssitzung",
+   "start": "2027-02-01T18:00:00",
+   "ende": "2027-02-01T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-gesundheit/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Gesundheit",
+   "start": "2027-02-02T19:00:00",
+   "ende": "2027-02-02T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/beiratslistenaufstellung-ost/",
+   "ort": "Bürgerhaus Hemelingen",
+   "titel": "Beiratslistenaufstellung Ost",
+   "start": "2027-02-03T19:00:00",
+   "ende": "2027-02-03T22:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/gruene-jugend/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "Grüne Jugend",
+   "start": "2027-02-04T18:30:00",
+   "ende": "2027-02-04T20:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-umwelt/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Umwelt",
+   "start": "2027-02-10T18:30:00",
+   "ende": "2027-02-10T20:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/buergerinnen-sprechstunde-mit-henrike-mueller/",
+   "ort": "Schwachhausen, tba",
+   "titel": "Bürger*innen-Sprechstunde mit Henrike Müller",
+   "start": "2027-02-15T18:30:00",
+   "ende": "2027-02-15T19:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-europa-frieden-internationales-4/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Europa, Frieden & Internationales",
+   "start": "2027-02-16T19:30:00",
+   "ende": "2027-02-16T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-mobilitaet-2/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Mobilität",
+   "start": "2027-02-18T19:00:00",
+   "ende": "2027-02-18T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-kinder-jugend-familie-2/",
+   "ort": "online",
+   "titel": "LAG Kinder, Jugend & Familie",
+   "start": "2027-02-18T19:30:00",
+   "ende": "2027-02-18T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/klonschnack-links-der-weser/",
+   "ort": "Kukoon",
+   "titel": "Klönschnack Links der Weser",
+   "start": "2027-02-24T19:00:00",
+   "ende": "2027-02-24T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-gesundheit-2/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Gesundheit",
+   "start": "2027-03-02T19:00:00",
+   "ende": "2027-03-02T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-umwelt-2/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Umwelt",
+   "start": "2027-03-10T18:30:00",
+   "ende": "2027-03-10T20:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/kreismitgliederversammlung-links-der-weser/",
+   "ort": "Ort folgt",
+   "titel": "Kreismitgliederversammlung Links der Weser",
+   "start": "2027-03-17T19:00:00",
+   "ende": "2027-03-17T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-gesundheit-3/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Gesundheit",
+   "start": "2027-04-06T19:00:00",
+   "ende": "2027-04-06T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-umwelt-4/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Umwelt",
+   "start": "2027-04-21T18:30:00",
+   "ende": "2027-04-21T20:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-kinder-jugend-familie-3/",
+   "ort": "online",
+   "titel": "LAG Kinder, Jugend & Familie",
+   "start": "2027-04-22T19:30:00",
+   "ende": "2027-04-22T21:30:00",
+   "quelle": "Grüne Bremen – Termine"
+  },
+  {
+   "link": "https://gruene-bremen.de/termine/lag-gesundheit-4/",
+   "ort": "Grüne Landesgeschäftsstelle",
+   "titel": "LAG Gesundheit",
+   "start": "2027-05-04T19:00:00",
+   "ende": "2027-05-04T21:00:00",
+   "quelle": "Grüne Bremen – Termine"
+  }
+ ]
+}

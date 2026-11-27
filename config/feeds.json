@@ -1,0 +1,19 @@
+{
+  "_hinweis": "Quellen für die News-Action. typ: rss (RSS/Atom), mastodon (Mastodon-RSS ohne Titel), typo3-liste (Pressemitteilungs-Liste der Grünen Fraktion). bonus: Extrapunkte für die Relevanz (z. B. Grünen-Quellen). Geprüft am 27.11.2026.",
+  "feeds": [
+    { "id": "bub", "name": "buten un binnen", "url": "https://www.butenunbinnen.de/feed/rss/nachrichten/neuste-nachrichten100.xml", "typ": "rss", "aktiv": true, "bonus": 0 },
+    { "id": "bub-alle", "name": "buten un binnen (alle Inhalte)", "url": "https://www.butenunbinnen.de/feed/rss/neuste-inhalte100.xml", "typ": "rss", "aktiv": false, "bonus": 0 },
+    { "id": "wk-bremen", "name": "Weser-Kurier", "url": "https://www.weser-kurier.de/bremen/?view=rss", "typ": "rss", "aktiv": true, "bonus": 0 },
+    { "id": "wk-politik", "name": "Weser-Kurier Politik", "url": "https://www.weser-kurier.de/bremen/politik/?view=rss", "typ": "rss", "aktiv": true, "bonus": 0 },
+    { "id": "wk-stadtteile", "name": "Weser-Kurier Stadtteile", "url": "https://www.weser-kurier.de/bremen/stadtteile/?view=rss", "typ": "rss", "aktiv": true, "bonus": 0 },
+    { "id": "taz-bremen", "name": "taz Bremen", "url": "https://taz.de/Nord/Bremen/!p4652;rss/", "typ": "rss", "aktiv": true, "bonus": 0 },
+    { "id": "taz-nord", "name": "taz nord", "url": "https://taz.de/Nord/!p4650;rss/", "typ": "rss", "aktiv": false, "bonus": 0 },
+    { "id": "buergerschaft", "name": "Bremische Bürgerschaft", "url": "https://social.bund.de/@hbbuergerschaft.rss", "typ": "mastodon", "aktiv": true, "bonus": 1 },
+    { "id": "senat", "name": "Senatspressestelle", "url": "https://www.senatspressestelle.bremen.de/", "typ": "rss", "aktiv": false, "bonus": 1, "_hinweis": "Server antwortet mit 403 (sperrt automatische Abrufe). Kein RSS gefunden." },
+    { "id": "gruene-lv", "name": "Grüne Landesverband Bremen", "url": "https://gruene-bremen.de/feed/", "typ": "rss", "aktiv": true, "bonus": 3 },
+    { "id": "gruene-fraktion", "name": "Grüne Bürgerschaftsfraktion", "url": "https://gruene-fraktion-bremen.de/presse/pressemitteilungen", "typ": "typo3-liste", "aktiv": true, "bonus": 3 }
+  ],
+  "kalender": [
+    { "id": "gruene-lv-termine", "name": "Grüne Bremen – Termine", "url": "https://gruene-bremen.de/termine/?format=ics", "aktiv": true }
+  ]
+}
