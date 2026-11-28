@@ -1,7 +1,7 @@
 // Service Worker: macht die App offlinefähig.
 // - App-Dateien: aus dem Cache (schnell), im Hintergrund aktualisiert
 // - Daten (data/, config/): erst Netz, bei Offline aus dem Cache
-const VERSION = 'v2';
+const VERSION = 'v3';
 const APP_CACHE = `gb-app-${VERSION}`;
 const DATEN_CACHE = 'gb-daten';
 
