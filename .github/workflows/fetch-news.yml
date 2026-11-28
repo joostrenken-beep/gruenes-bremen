@@ -1,0 +1,63 @@
+name: Nachrichten aktualisieren
+
+# 6:00 und 17:00 Uhr deutscher Zeit.
+# GitHub rechnet in UTC, deshalb gibt es je einen Zeitplan für Sommer- und Winterzeit;
+# der Schritt "Uhrzeit prüfen" lässt jeweils nur den passenden laufen.
+on:
+  schedule:
+    - cron: '0 4,15 * * *'   # Sommerzeit (MESZ = UTC+2)
+    - cron: '0 5,16 * * *'   # Winterzeit (MEZ  = UTC+1)
+  workflow_dispatch:          # Button "Run workflow" zum manuellen Starten
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-news
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uhrzeit prüfen (Sommer-/Winterzeit)
+        id: zeit
+        run: |
+          TZNAME=$(TZ=Europe/Berlin date +%Z)
+          echo "Berlin: $(TZ=Europe/Berlin date) ($TZNAME), Auslöser: '${{ github.event.schedule }}'"
+          LAUFEN=true
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            if [ "${{ github.event.schedule }}" = "0 4,15 * * *" ] && [ "$TZNAME" != "CEST" ]; then LAUFEN=false; fi
+            if [ "${{ github.event.schedule }}" = "0 5,16 * * *" ] && [ "$TZNAME" != "CET" ]; then LAUFEN=false; fi
+          fi
+          echo "laufen=$LAUFEN" >> "$GITHUB_OUTPUT"
+          echo "Läuft: $LAUFEN"
+
+      - uses: actions/checkout@v4
+        if: steps.zeit.outputs.laufen == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.zeit.outputs.laufen == 'true'
+        with:
+          node-version: 22
+
+      - name: Selbsttest (Parser & Relevanz)
+        if: steps.zeit.outputs.laufen == 'true'
+        run: node scripts/test.mjs
+
+      - name: Feeds laden und bewerten
+        if: steps.zeit.outputs.laufen == 'true'
+        run: node scripts/fetch-news.mjs
+
+      - name: Änderungen speichern (commit)
+        if: steps.zeit.outputs.laufen == 'true'
+        run: |
+          git config user.name "news-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/news.json data/termine-auto.json
+          if git diff --cached --quiet; then
+            echo "Keine neuen Meldungen."
+          else
+            git commit -m "Nachrichten aktualisiert: $(TZ=Europe/Berlin date '+%d.%m.%Y %H:%M')"
+            git push
+          fi

@@ -1,0 +1,11 @@
+{
+  "name": "gruenes-bremen",
+  "private": true,
+  "type": "module",
+  "description": "Grünes Bremen – Lage & Mitmachen (persönliche Nachrichten-PWA)",
+  "scripts": {
+    "fetch": "node scripts/fetch-news.mjs",
+    "test": "node scripts/test.mjs",
+    "start": "npx --yes http-server -c-1 -p 8080 ."
+  }
+}

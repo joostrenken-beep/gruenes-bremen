@@ -1,0 +1,56 @@
+{
+  "_hinweis": "Stichwörter werden ohne Groß/Klein verglichen und treffen auch längere Wörter, die so ANFANGEN (\"Kita\" trifft \"Kitaplätze\"). Ein * vorne heißt: irgendwo im Wort (\"*schule\" trifft \"Grundschule\"). Zahl = Gewicht (1 = schwach, 3 = stark).",
+  "version": 1,
+  "themenfelder": [
+    {
+      "id": "politik",
+      "name": "Landespolitik",
+      "lang": "Bremer Landespolitik",
+      "stichwoerter": {
+        "Bürgerschaft": 3, "Landtag": 2, "*senat": 2, "Bürgermeister": 2, "Bovenschulte": 2,
+        "Koalition": 3, "Rot-Grün-Rot": 3, "Haushalt": 3, "Schuldenbremse": 3, "Sparkurs": 2, "Sparpaket": 2,
+        "Beirat": 3, "Beiräte": 3, "Ortsamt": 2, "Deputation": 2, "Untersuchungsausschuss": 2,
+        "Bürgerschaftswahl": 3, "Wahlkampf": 2, "Landesregierung": 2, "Gesetzentwurf": 2, "Antrag": 1,
+        "Opposition": 1, "CDU": 1, "SPD": 1, "Linke": 1, "FDP": 1, "BSW": 1, "AfD": 1,
+        "Petition": 2, "Bürgerbeteiligung": 3, "Innenstadt": 2, "Stadtentwicklung": 2, "Wohnungsbau": 2, "Bremerhaven": 1
+      }
+    },
+    {
+      "id": "umwelt",
+      "name": "Umwelt & Klima",
+      "lang": "Umwelt, Klima, Wasser",
+      "stichwoerter": {
+        "Klimaanpassung": 3, "Klimaschutz": 3, "*klima": 2, "Starkregen": 3, "Hochwasser": 3, "Sturmflut": 3, "Überflutung": 3, "Überschwemmung": 3,
+        "Hitze": 3, "Hitzeschutz": 3, "Dürre": 2, "Grünfläche": 3, "Grünanlage": 3, "Stadtgrün": 3, "Park": 1, "*bäume": 2, "Baumfällung": 3,
+        "Gewässer": 3, "Weser": 1, "Deich": 2, "Abwasser": 3, "Kanalisation": 3, "*kanal": 1, "Entwässerung": 3, "hanseWasser": 3, "Kläranlage": 3,
+        "Rohrbruch": 3, "*wasserrohr": 3, "Wasserversorgung": 2, "Infrastruktur": 2, "Schwammstadt": 3, "Versickerung": 3, "Entsiegelung": 3, "Regenwasser": 3, "Grundwasser": 2, "Trinkwasser": 2,
+        "*energie": 2, "Wärmewende": 3, "Wärmeplanung": 3, "Fernwärme": 2, "Solar": 2, "Photovoltaik": 2, "Windkraft": 2, "Windenergie": 2, "Wasserstoff": 2, "Kohle": 2, "Stahlwerk": 2,
+        "Mobilität": 2, "*verkehr": 2, "Radverkehr": 3, "Fahrrad": 2, "Radweg": 3, "ÖPNV": 3, "BSAG": 2, "Straßenbahn": 2, "Tempo 30": 2, "Autofrei": 2, "Parkplätze": 1,
+        "Naturschutz": 3, "Artenschutz": 2, "Biodiversität": 3, "*umwelt": 2, "Luftqualität": 2, "Nachhaltig": 2, "CO2": 2, "Emission": 2
+      }
+    },
+    {
+      "id": "bildung",
+      "name": "Bildung & Familie",
+      "lang": "Bildung, Kinder, Familie",
+      "stichwoerter": {
+        "Kita": 3, "Kitas": 3, "Kindertagesstätte": 3, "Kindergarten": 3, "Kinderbetreuung": 3, "Krippe": 2, "Erzieher": 3,
+        "*schule": 3, "Schüler": 2, "Lehrkräfte": 3, "Lehrer": 2, "Unterricht": 2, "Ganztag": 2, "*bildung": 2, "Inklusion": 2, "Sprachförderung": 3,
+        "Kinder": 2, "Kinderarmut": 3, "Kinderschutz": 3, "Jugend": 2, "Jugendliche": 2, "Jugendhilfe": 3, "Jugendamt": 2, "Spielplatz": 2, "Schulweg": 2,
+        "Familie": 2, "Familien": 2, "Eltern": 2, "Elterngeld": 2, "Ausbildung": 2
+      }
+    }
+  ],
+  "boost": {
+    "Grüne": 4, "Bündnis 90": 4,
+    "Emanuel Herold": 3, "Herold": 2, "Solveig Eschen": 3, "Philipp Bruck": 3, "Görgü-Philipp": 3, "Labetzke": 3, "Bithja Menzel": 3,
+    "Ralph Saxe": 3, "Saxe": 2, "Maike Schaefer": 3, "Franziska Tell": 3, "Tuncel": 3, "Wargalla": 3,
+    "Björn Fecker": 3, "Fecker": 3, "Henrike Müller": 3, "Umweltsenatorin": 3, "Umweltressort": 3, "Finanzsenator": 3, "Finanzressort": 2,
+    "Kappert-Gonther": 3, "Langensiepen": 2
+  },
+  "ausschluss": [
+    "Bundesliga", "Werder Bremen", "Fischtown Pinguins", "Eisbären Bremerhaven", "Horoskop", "Gewinnspiel", "Kreuzworträtsel", "Lotto", "Verkehrsunfall", "Blitzer"
+  ],
+  "schwellen": { "hoch": 55, "mittel": 25 },
+  "politikbezug": { "themenfeld": "politik", "faktorOhne": 0.75, "_hinweis": "Meldungen ohne Treffer im Themenfeld Landespolitik und ohne Grünen-Bezug werden mit diesem Faktor abgeschwächt (1 = aus)." }
+}

@@ -1,0 +1,4 @@
+{
+ "_hinweis": "Eigene Termine (zusätzlich zu den automatisch geladenen aus data/termine-auto.json). Format siehe README. start: \"JJJJ-MM-TTTHH:MM:00\" (deutsche Ortszeit).",
+ "termine": []
+}
