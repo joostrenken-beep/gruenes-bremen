@@ -105,7 +105,8 @@ Der Code wurde auf einem eigenen Branch entwickelt (`claude/gruenes-bremen-news-
 2. Tippe auf **Teilen** (Quadrat mit Pfeil) → **Zum Home-Bildschirm**.
 3. Die App startet jetzt wie eine normale App. Sie funktioniert auch **offline** mit den zuletzt geladenen Meldungen.
 4. Einmal einrichten: **Einstellungen** (unten rechts) → **Mein Profil** → Name, Fachprofil und Rolle eintragen → Speichern.
-5. Ab und zu sichern: **Einstellungen → Sichern → Exportieren**. Die JSON-Datei z. B. in iCloud Drive ablegen.
+5. **Filtern:** Oben auf der Lage-Seite die Ressorts (Landespolitik, Umwelt & Klima …) antippen. Über **Filter** wählst du Zeitraum, Relevanz, Quelle und beliebig viele **Stichwörter**. Auf der Seite **Themen** führt ein Tippen auf ein Stichwort oder Themenfeld direkt zur gefilterten Lage.
+6. Ab und zu sichern: **Einstellungen → Sichern → Exportieren**. Die JSON-Datei z. B. in iCloud Drive ablegen.
 
 > iOS kann Website-Daten von Apps löschen, die mehrere Wochen nicht geöffnet wurden. Deshalb ist der Export wichtig.
 

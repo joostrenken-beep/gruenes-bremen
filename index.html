@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Grünes Bremen – Lage &amp; Mitmachen</title>
   <meta name="description" content="Persönliche Lage zu Bremer Themen mit Relevanz für die Grünen – und Ideen zum Mitmachen.">
-  <meta name="theme-color" content="#f4f6f3" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f1512" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101110" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -19,18 +19,18 @@
 <body>
   <header class="kopf">
     <div class="kopf-innen">
-      <a href="#/" class="marke" aria-label="Startseite">
-        <img src="icons/icon.svg" alt="" width="28" height="28">
-        <span><strong>Grünes Bremen</strong><small>Lage &amp; Mitmachen</small></span>
+      <a href="#/" class="marke" aria-label="Grünes Bremen – zur Lage">
+        <img src="icons/icon.svg" alt="" width="26" height="26">
+        <span>Grünes Bremen</span>
       </a>
       <div class="kopf-rechts">
         <span id="stand" class="stand" aria-live="polite"></span>
-        <button id="neu-laden" class="icon-btn" type="button" aria-label="Daten neu laden" title="Daten neu laden">
+        <button id="neu-laden" class="icon-knopf" type="button" aria-label="Daten neu laden" title="Daten neu laden">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>
         </button>
       </div>
     </div>
-    <div id="offline" class="offline" hidden>Offline – du siehst die zuletzt geladenen Meldungen.</div>
+    <div id="offline" class="offline" hidden>Offline · zuletzt geladene Meldungen</div>
   </header>
 
   <main id="app" class="inhalt" tabindex="-1">
@@ -59,6 +59,14 @@
       <span>Einstellungen</span>
     </a>
   </nav>
+
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-hintergrund" data-act="sheet-zu"></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-label="Filter">
+      <div class="sheet-griff" aria-hidden="true"></div>
+      <div id="sheet-inhalt"></div>
+    </div>
+  </div>
 
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
