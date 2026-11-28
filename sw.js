@@ -1,7 +1,7 @@
 // Service Worker: macht die App offlinefähig.
 // - App-Dateien: aus dem Cache (schnell), im Hintergrund aktualisiert
 // - Daten (data/, config/): erst Netz, bei Offline aus dem Cache
-const VERSION = 'v3';
+const VERSION = 'v4';
 const APP_CACHE = `gb-app-${VERSION}`;
 const DATEN_CACHE = 'gb-daten';
 
@@ -15,7 +15,7 @@ const APP_DATEIEN = [
   'icons/icon.svg',
   'icons/icon-192.png',
   'icons/icon-512.png',
-  'icons/apple-touch-icon.png',
+  'icons/apple-touch-icon-180.png',
 ];
 const DATEN_DATEIEN = [
   'data/news.json',
@@ -52,6 +52,7 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // externe Links nicht anfassen
+  if (url.pathname.includes('/icons/') && !url.pathname.endsWith('.svg')) return; // App-Icons immer direkt vom Server (für iOS)
 
   const istDaten = /\/(data|config)\/[^/]+\.json$/.test(url.pathname);
   if (istDaten) {
