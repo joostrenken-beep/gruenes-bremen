@@ -98,6 +98,7 @@ const ICON = {
   kopie: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>',
   kalender: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4m6-4v4"/></svg>',
   extern: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6m0-6-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
+  filter: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>',
   suche: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
 };
 
@@ -115,8 +116,9 @@ const S = {
   vorlageId: null,
 };
 
-const STANDARD_FILTER = { zeitraum: '7', themenfeld: '', relevanz: '', quelle: '', suche: '', ohneGelesene: false, sortierung: 'relevanz' };
+const STANDARD_FILTER = { zeitraum: '7', themenfeld: '', relevanz: '', quelle: '', suche: '', ohneGelesene: false, sortierung: 'relevanz', stichwoerter: [] };
 const filter = { ...STANDARD_FILTER, ...store.get('filter', {}), suche: '' };
+if (!Array.isArray(filter.stichwoerter)) filter.stichwoerter = [];
 const STANDARD_PROFIL = { name: '', fachprofil: 'Bauingenieur, Erfahrung in Stadtentwässerung und Starkregenvorsorge', rolle: '' };
 
 const themen = () => store.get('themen', null) || S.basis.themen;
@@ -186,8 +188,9 @@ function neuBewerten() {
       themenfeld: c.haupt.themenfeld,
       datum: alle.map((m) => m.datum).sort().pop(),
       treffer: [...new Set(alle.flatMap((m) => m.treffer || []))],
-      begruendung: c.haupt.begruendung + (quellen.length > 1 ? ` · ${quellen.length} Quellen` : ''),
+      begruendung: c.haupt.begruendung,
       text: alle.map((m) => `${m.titel} ${m.teaser} ${m.quelle}`).join(' ').toLowerCase(),
+      inhalt: alle.map((m) => `${m.titel} ${m.teaser}`).join(' ').toLowerCase(),
     };
   });
   S.nachId = new Map();
@@ -200,16 +203,45 @@ function zeitGrenze(z) {
   return Date.now() - Number(z || 30) * tageMs;
 }
 
-function gefiltert() {
+// Alle Stichwörter aus den Themenfeldern (+ Grünen-Bezug) als Filter-Kategorien
+const reCache = new Map();
+function reFuer(wort) {
+  if (!reCache.has(wort)) reCache.set(wort, stichwortRegex(wort));
+  return reCache.get(wort);
+}
+const anzeigeName = (w) => { const x = String(w).replace(/^\*/, ''); return x.charAt(0).toUpperCase() + x.slice(1); };
+
+// Zählt, wie viele Themen jedes Stichwort treffen (in der übergebenen Auswahl).
+function stichwortStatistik(cl) {
+  const gruppen = [
+    ...themen().themenfelder.map((t) => ({ id: t.id, name: t.name, woerter: Object.keys(t.stichwoerter || {}) })),
+    { id: 'boost', name: 'Grünen-Bezug', woerter: Object.keys(themen().boost || {}) },
+  ];
+  return gruppen.map((g) => ({
+    ...g,
+    woerter: g.woerter
+      .map((w) => ({ wort: w, name: anzeigeName(w), n: cl.filter((c) => reFuer(w)?.test(c.inhalt)).length }))
+      .filter((x) => x.n > 0)
+      .sort((a, b) => b.n - a.n || a.name.localeCompare(b.name)),
+  }));
+}
+
+function passtStichwort(c) {
+  if (!filter.stichwoerter.length) return true;
+  return filter.stichwoerter.some((w) => reFuer(w)?.test(c.inhalt));
+}
+
+function gefiltert({ ohneThemenfeld = false, ohneStichwoerter = false } = {}) {
   const grenze = zeitGrenze(filter.zeitraum);
   const woerter = filter.suche.toLowerCase().split(/\s+/).filter(Boolean);
   const gel = gelesen();
   let liste = S.cluster.filter((c) => {
     if (new Date(c.datum).getTime() < grenze) return false;
-    if (filter.themenfeld && c.themenfeld !== filter.themenfeld) return false;
+    if (!ohneThemenfeld && filter.themenfeld && c.themenfeld !== filter.themenfeld) return false;
     if (filter.relevanz && c.label !== filter.relevanz) return false;
     if (filter.quelle && !c.quellen.includes(filter.quelle)) return false;
     if (filter.ohneGelesene && c.alle.some((m) => gel.has(m.id))) return false;
+    if (!ohneStichwoerter && !passtStichwort(c)) return false;
     if (woerter.length && !woerter.every((w) => c.text.includes(w))) return false;
     return true;
   });
@@ -218,6 +250,9 @@ function gefiltert() {
     : (a, b) => b.score - a.score || new Date(b.datum) - new Date(a.datum));
   return liste;
 }
+
+const filterAnzahl = () =>
+  (filter.relevanz ? 1 : 0) + (filter.quelle ? 1 : 0) + filter.stichwoerter.length + (filter.ohneGelesene ? 1 : 0) + (filter.zeitraum !== '7' ? 1 : 0);
 
 function top3() {
   for (const stunden of [24, 48, 96]) {
@@ -228,76 +263,159 @@ function top3() {
   return [];
 }
 
-// ============ Karten ============
-function karte(c, { rang = 0, voll = false } = {}) {
+// ============ Meldungen (Darstellung) ============
+function relevanzAnzeige(c) {
+  return `<span class="score score-${esc(c.label)}" title="Relevanz ${c.score} von 100"><span class="score-label">${esc(c.label)}</span><span class="score-balken"><i style="width:${c.score}%"></i></span><span class="score-zahl">${c.score}</span></span>`;
+}
+
+function karte(c, { rang = 0, voll = false, gross = false } = {}) {
   const gel = gelesen();
   const istGelesen = c.alle.some((m) => gel.has(m.id));
   const istGemerkt = istGemerktCluster(c);
   const m = c.haupt;
+  const quellenText = c.quellen.length > 1 ? ` · <b>${c.quellen.length} Quellen</b>` : '';
   return `
-  <article class="karte ${istGelesen && !voll ? 'gelesen' : ''}" data-id="${esc(c.id)}">
-    <div class="karte-kopf">
-      <span>${rang ? `<span class="rang">#${rang} </span>` : ''}<span class="tag tf-${esc(c.themenfeld)}">${esc(themenfeldName(c.themenfeld))}</span></span>
-      <span class="rel rel-${esc(c.label)}" title="Relevanz-Score ${c.score} von 100">${esc(c.label)} · ${c.score}</span>
+  <article class="meldung ${gross ? 'aufmacher' : ''} ${rang && !gross ? 'neben' : ''} ${voll ? 'voll' : ''} ${istGelesen && !voll ? 'gelesen' : ''}" data-id="${esc(c.id)}">
+    ${rang && !gross ? `<span class="rangzahl" aria-hidden="true">${rang}</span>` : ''}
+    <div class="meldung-inhalt">
+      <div class="kicker">
+        <button type="button" class="ressort tf-${esc(c.themenfeld)}" data-f-themenfeld="${esc(c.themenfeld)}" title="Nur ${esc(themenfeldName(c.themenfeld))} zeigen">${esc(themenfeldName(c.themenfeld))}</button>
+        ${relevanzAnzeige(c)}
+      </div>
+      <h3><a href="${esc(m.link)}" target="_blank" rel="noopener" data-act="oeffnen">${esc(m.titel)}</a></h3>
+      ${m.teaser && (gross || voll || !rang) ? `<p class="teaser">${esc(m.teaser)}</p>` : ''}
+      <p class="warum">${esc(c.begruendung)}</p>
+      <div class="fuss">
+        <span class="herkunft">${esc(m.quelle)} · ${esc(relativ(c.datum))}${quellenText}</span>
+        ${voll ? '' : `
+        <span class="werkzeuge">
+          <button class="icon-knopf" type="button" data-act="merken" aria-pressed="${istGemerkt}" aria-label="${istGemerkt ? 'Gemerkt – entfernen' : 'Merken'}">${istGemerkt ? ICON.gemerkt : ICON.merken}</button>
+          <button class="icon-knopf" type="button" data-act="gelesen" aria-pressed="${istGelesen}" aria-label="${istGelesen ? 'Als ungelesen markieren' : 'Als gelesen markieren'}">${ICON.gelesen}</button>
+          <a class="mitmachen-link" href="#/m/${esc(c.id)}">Mitmachen ${ICON.pfeil}</a>
+        </span>`}
+      </div>
     </div>
-    <h3><a href="${esc(m.link)}" target="_blank" rel="noopener" data-act="oeffnen">${esc(m.titel)}</a></h3>
-    <div class="meta">
-      <span>${esc(m.quelle)}</span><span class="punkt">${esc(relativ(c.datum))}</span>
-      ${c.quellen.length > 1 ? `<span class="punkt quellen-anzahl">${c.quellen.length} Quellen</span>` : ''}
-    </div>
-    ${m.teaser ? `<p class="teaser ${voll ? 'voll' : ''}">${esc(m.teaser)}</p>` : ''}
-    <p class="warum"><b>Warum relevant:</b> ${esc(c.begruendung)}</p>
-    ${voll ? '' : `
-    <div class="aktionen">
-      <button class="btn" type="button" data-act="merken" aria-pressed="${istGemerkt}">${istGemerkt ? ICON.gemerkt : ICON.merken}${istGemerkt ? 'Gemerkt' : 'Merken'}</button>
-      <button class="btn" type="button" data-act="gelesen" aria-pressed="${istGelesen}">${ICON.gelesen}${istGelesen ? 'Gelesen' : 'Gelesen?'}</button>
-      <a class="btn primaer" href="#/m/${esc(c.id)}">Mitmachen ${ICON.pfeil}</a>
-    </div>`}
   </article>`;
 }
 
 // ============ Ansicht: Lage (Startseite) ============
+const WOCHENTAG_LANG = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+
+function aktiveFilterTokens() {
+  const t = [];
+  if (filter.zeitraum !== '7') t.push(['zeitraum', filter.zeitraum === 'heute' ? 'Heute' : `${filter.zeitraum} Tage`]);
+  if (filter.relevanz) t.push(['relevanz', `Relevanz ${filter.relevanz}`]);
+  if (filter.quelle) t.push(['quelle', filter.quelle]);
+  for (const w of filter.stichwoerter) t.push(['stichwort:' + w, anzeigeName(w)]);
+  if (filter.ohneGelesene) t.push(['gelesen', 'ohne Gelesene']);
+  return t;
+}
+
 function ansichtLage() {
   const liste = gefiltert();
-  const filterAktiv = filter.suche || filter.themenfeld || filter.relevanz || filter.quelle;
+  const filterAktiv = filter.suche || filter.themenfeld || filterAnzahl() > (filter.zeitraum !== '7' ? 1 : 0);
   const top = filterAktiv ? [] : top3();
   const topIds = new Set(top.map((c) => c.id));
   const rest = liste.filter((c) => !topIds.has(c.id));
-  const quellen = [...new Set(S.cluster.flatMap((c) => c.quellen))].sort();
-  const sel = (wert, aktuell) => (wert === aktuell ? 'selected' : '');
+  const heute = new Date();
+  const proFeld = gefiltert({ ohneThemenfeld: true });
+  const ressorts = [['', 'Alle'], ...themen().themenfelder.map((t) => [t.id, t.name]), ['sonstiges', 'Sonstiges']];
+  const tokens = aktiveFilterTokens();
+  const stand = S.news.stand ? new Date(S.news.stand) : null;
 
   return `
-  ${top.length ? `
-    <div class="abschnitt"><h2>Top 3 des Tages</h2><span class="klein">${esc(datumLang(new Date()))}</span></div>
-    <div class="top3">${top.map((c, i) => karte(c, { rang: i + 1 })).join('')}</div>` : ''}
+  <header class="masthead">
+    <p class="dachzeile">${WOCHENTAG_LANG[heute.getDay()]}, ${heute.getDate()}. ${MONAT[heute.getMonth()]} ${heute.getFullYear()}</p>
+    <h1>Die Lage</h1>
+    <p class="unterzeile">${S.cluster.length} Themen aus ${(S.news.quellen || []).filter((q) => q.ok).length} Quellen${stand ? ` · aktualisiert ${esc(relativ(S.news.stand))}` : ''}</p>
+  </header>
 
-  <div class="abschnitt"><h2>Alle Meldungen</h2><span class="klein">${liste.length} Themen</span></div>
-  <div class="filter">
-    <div class="suche">${ICON.suche}<input type="search" id="f-suche" placeholder="Suchen, z. B. Starkregen" value="${esc(filter.suche)}" aria-label="Suche"></div>
-    <div class="chips" role="group" aria-label="Zeitraum">
-      ${[['heute', 'Heute'], ['7', '7 Tage'], ['30', '30 Tage']].map(([w, t]) => `<button class="chip" type="button" data-zeitraum="${w}" aria-pressed="${filter.zeitraum === w}">${t}</button>`).join('')}
-      <button class="chip" type="button" data-sort aria-pressed="false">Sortierung: ${filter.sortierung === 'neueste' ? 'Neueste' : 'Relevanz'}</button>
+  ${top.length ? `
+  <section class="titelseite" aria-label="Top 3 des Tages">
+    <h2 class="rubrik">Top 3 des Tages</h2>
+    ${karte(top[0], { rang: 1, gross: true })}
+    <div class="nebenreihe">${top.slice(1).map((c, i) => karte(c, { rang: i + 2 })).join('')}</div>
+  </section>` : ''}
+
+  <section aria-label="Alle Meldungen" class="liste-bereich">
+    <nav class="ressorts" aria-label="Themenfeld">
+      ${ressorts.map(([id, name]) => {
+        const n = id ? proFeld.filter((c) => c.themenfeld === id).length : proFeld.length;
+        return `<button type="button" class="ressort-tab ${id ? 'tf-' + id : ''}" data-f-themenfeld="${esc(id)}" aria-pressed="${filter.themenfeld === id}">${esc(name)}<sup>${n}</sup></button>`;
+      }).join('')}
+    </nav>
+    <div class="werkzeugleiste">
+      <label class="suchfeld">${ICON.suche}<input type="search" id="f-suche" placeholder="Suchen" value="${esc(filter.suche)}" aria-label="Meldungen durchsuchen"></label>
+      <button type="button" class="filter-knopf" data-act="sheet-auf" aria-haspopup="dialog">${ICON.filter}Filter${filterAnzahl() ? `<span class="badge">${filterAnzahl()}</span>` : ''}</button>
     </div>
-    <div class="filter-zeile">
-      <select id="f-themenfeld" aria-label="Themenfeld">
-        <option value="">Alle Themen</option>
-        ${themen().themenfelder.map((t) => `<option value="${esc(t.id)}" ${sel(t.id, filter.themenfeld)}>${esc(t.name)}</option>`).join('')}
-        <option value="sonstiges" ${sel('sonstiges', filter.themenfeld)}>Sonstiges</option>
-      </select>
-      <select id="f-relevanz" aria-label="Relevanz">
-        <option value="">Jede Relevanz</option>
-        ${['Hoch', 'Mittel', 'Niedrig'].map((r) => `<option ${sel(r, filter.relevanz)}>${r}</option>`).join('')}
-      </select>
-      <select id="f-quelle" aria-label="Quelle">
-        <option value="">Alle Quellen</option>
-        ${quellen.map((q) => `<option ${sel(q, filter.quelle)}>${esc(q)}</option>`).join('')}
-      </select>
+    ${tokens.length ? `<div class="tokens">${tokens.map(([k, n]) => `<button type="button" class="token" data-f-entfernen="${esc(k)}" aria-label="Filter ${esc(n)} entfernen">${esc(n)}<span aria-hidden="true">×</span></button>`).join('')}<button type="button" class="token-reset" data-act="filter-reset">Alle entfernen</button></div>` : ''}
+    <div class="listenkopf">
+      <span>${liste.length} ${liste.length === 1 ? 'Thema' : 'Themen'}</span>
+      <button type="button" class="text-knopf" data-sort>${filter.sortierung === 'neueste' ? 'Neueste zuerst' : 'Relevanteste zuerst'} ⇅</button>
     </div>
-    <label class="schalter"><input type="checkbox" id="f-gelesen" ${filter.ohneGelesene ? 'checked' : ''}> Gelesene ausblenden</label>
+    <div id="liste">
+      ${rest.length ? rest.map((c) => karte(c)).join('') : `<p class="leer">Keine Meldungen für diese Auswahl.${S.cluster.length ? '' : '<br>Noch keine Daten geladen – läuft die GitHub Action schon?'}</p>`}
+    </div>
+  </section>`;
+}
+
+// ============ Filter-Fenster (Bottom Sheet) ============
+function sheetInhalt() {
+  const quellen = [...new Set(S.cluster.flatMap((c) => c.quellen))].sort();
+  const stat = stichwortStatistik(gefiltert({ ohneStichwoerter: true }));
+  const treffer = gefiltert().length;
+  const seg = (attr, optionen, aktuell) => `<div class="segment">${optionen.map(([w, n]) => `<button type="button" ${attr}="${esc(w)}" aria-pressed="${aktuell === w}">${esc(n)}</button>`).join('')}</div>`;
+  return `
+  <div class="sheet-kopf">
+    <button type="button" class="text-knopf" data-act="filter-reset">Zurücksetzen</button>
+    <h2>Filter</h2>
+    <button type="button" class="fertig-knopf" data-act="sheet-zu">${treffer} zeigen</button>
   </div>
-  <div id="liste" style="margin-top:14px">
-    ${rest.length ? rest.map((c) => karte(c)).join('') : `<p class="leer">Keine Meldungen für diese Auswahl.${S.cluster.length ? '' : '<br>Noch keine Daten geladen – läuft die GitHub Action schon?'}</p>`}
+  <div class="sheet-koerper">
+    <h3>Zeitraum</h3>
+    ${seg('data-f-zeitraum', [['heute', 'Heute'], ['7', '7 Tage'], ['30', '30 Tage']], filter.zeitraum)}
+    <h3>Relevanz</h3>
+    ${seg('data-f-relevanz', [['', 'Alle'], ['Hoch', 'Hoch'], ['Mittel', 'Mittel'], ['Niedrig', 'Niedrig']], filter.relevanz)}
+    <h3>Sortierung</h3>
+    ${seg('data-f-sort', [['relevanz', 'Relevanz'], ['neueste', 'Neueste']], filter.sortierung)}
+    <h3>Stichwörter <small>mehrere möglich · Zahl = passende Themen</small></h3>
+    ${stat.filter((g) => g.woerter.length).map((g) => `
+      <div class="stichwort-gruppe">
+        <p class="gruppen-name ${g.id !== 'boost' ? 'tf-' + esc(g.id) : ''}">${esc(g.name)}</p>
+        <div class="wortwolke">${g.woerter.map((w) => `<button type="button" class="wort" data-f-stichwort="${esc(w.wort)}" aria-pressed="${filter.stichwoerter.includes(w.wort)}">${esc(w.name)} <span>${w.n}</span></button>`).join('')}</div>
+      </div>`).join('') || '<p class="hinweis">Im Zeitraum keine Treffer.</p>'}
+    <h3>Quelle</h3>
+    <div class="wortwolke">
+      <button type="button" class="wort" data-f-quelle="" aria-pressed="${!filter.quelle}">Alle</button>
+      ${quellen.map((q) => `<button type="button" class="wort" data-f-quelle="${esc(q)}" aria-pressed="${filter.quelle === q}">${esc(q)}</button>`).join('')}
+    </div>
+    <label class="umschalter"><span>Gelesene ausblenden</span><input type="checkbox" id="f-gelesen" ${filter.ohneGelesene ? 'checked' : ''}><i aria-hidden="true"></i></label>
   </div>`;
+}
+
+function sheetZeichnen() {
+  const box = $('#sheet-inhalt');
+  if (!box) return;
+  const koerper = $('.sheet-koerper', box);
+  const pos = koerper ? koerper.scrollTop : 0;
+  box.innerHTML = sheetInhalt();
+  const neu = $('.sheet-koerper', box);
+  if (neu) neu.scrollTop = pos;
+}
+function sheetAuf() {
+  const s = $('#sheet');
+  sheetZeichnen();
+  s.hidden = false;
+  document.body.classList.add('sheet-offen');
+  requestAnimationFrame(() => s.classList.add('offen'));
+  $('.fertig-knopf', s)?.focus();
+}
+function sheetZu() {
+  const s = $('#sheet');
+  if (s.hidden) return;
+  s.classList.remove('offen');
+  document.body.classList.remove('sheet-offen');
+  setTimeout(() => { s.hidden = true; }, 220);
 }
 
 // ============ Ansicht: Detail + Mitmachen ============
@@ -305,7 +423,7 @@ function passendeGremien(c) {
   return S.gremien
     .map((g) => {
       let punkte = (g.themenfelder || []).includes(c.themenfeld) ? 2 : 0;
-      for (const w of g.stichwoerter || []) { const re = stichwortRegex(w); if (re && re.test(c.text)) punkte += 1.5; }
+      for (const w of g.stichwoerter || []) { const re = stichwortRegex(w); if (re && re.test(c.inhalt)) punkte += 1.5; }
       return { g, punkte };
     })
     .filter((x) => x.punkte > 0)
@@ -317,7 +435,7 @@ function passendeKontakte(c) {
   return S.kontakte
     .map((k) => {
       let punkte = (k.themenfelder || []).includes(c.themenfeld) ? 1 : 0;
-      for (const w of k.stichwoerter || []) { const re = stichwortRegex(w); if (re && re.test(c.text)) punkte += 2; }
+      for (const w of k.stichwoerter || []) { const re = stichwortRegex(w); if (re && re.test(c.inhalt)) punkte += 2; }
       return { k, punkte };
     })
     .filter((x) => x.punkte > 0)
@@ -560,20 +678,21 @@ function ansichtGemerkt() {
 function ansichtThemen() {
   const grenze = Date.now() - 7 * tageMs;
   const cl = S.cluster.filter((c) => new Date(c.datum).getTime() >= grenze);
-  const zaehler = new Map();
-  for (const c of cl) for (const t of c.treffer) zaehler.set(t, (zaehler.get(t) || 0) + 1);
-  const top = [...zaehler.entries()].sort((a, b) => b[1] - a[1]).slice(0, 25);
-  const max = Math.max(1, ...top.map(([, n]) => n));
+  const stat = stichwortStatistik(cl);
+  const alle = stat.flatMap((g) => g.woerter.map((w) => ({ ...w, gruppe: g.id }))).sort((a, b) => b.n - a.n);
+  const max = Math.max(1, ...alle.map((w) => w.n));
   const felder = [...themen().themenfelder.map((t) => t.id), 'sonstiges'].map((id) => ({ id, n: cl.filter((c) => c.themenfeld === id).length, hoch: cl.filter((c) => c.themenfeld === id && c.label === 'Hoch').length }));
+  const balken = (w) => `<div class="balken"><button type="button" data-f-nur-stichwort="${esc(w.wort)}">${esc(w.name)}</button><div class="spur"><div class="fuell" style="width:${(w.n / max) * 100}%"></div></div><span class="zahl">${w.n}</span></div>`;
   return `
-  <div class="seitentitel"><h1>Themen der Woche</h1><p>Häufigste Stichwörter der letzten 7 Tage (${cl.length} Themen). Tippen zum Suchen.</p></div>
-  <div class="kacheln">
-    ${felder.map((f) => `<div class="kachel"><b>${f.n}</b><span class="tag tf-${f.id}">${esc(themenfeldName(f.id))}</span><br><span>davon ${f.hoch} hoch relevant</span></div>`).join('')}
+  <header class="masthead"><p class="dachzeile">Letzte 7 Tage · ${cl.length} Themen</p><h1>Themen der Woche</h1><p class="unterzeile">Tippe auf ein Themenfeld oder Stichwort, um die Lage danach zu filtern.</p></header>
+  <div class="kennzahlen">
+    ${felder.map((f) => `<button type="button" class="kennzahl tf-${f.id}" data-f-nur-themenfeld="${f.id}"><b>${f.n}</b><span class="kennzahl-name">${esc(themenfeldName(f.id))}</span><span>${f.hoch} hoch relevant</span></button>`).join('')}
   </div>
-  <div class="abschnitt"><h2>Stichwörter</h2></div>
-  <div class="panel">
-    ${top.length ? top.map(([w, n]) => `<div class="balken"><button type="button" data-suche="${esc(w)}">${esc(w)}</button><div class="spur"><div class="fuell" style="width:${(n / max) * 100}%"></div></div><span class="zahl">${n}</span></div>`).join('') : '<p class="hinweis">Noch keine Treffer.</p>'}
-  </div>`;
+  <h2 class="rubrik">Häufigste Stichwörter</h2>
+  <div class="balkenliste">${alle.length ? alle.slice(0, 25).map(balken).join('') : '<p class="hinweis">Noch keine Treffer.</p>'}</div>
+  ${stat.filter((g) => g.woerter.length).map((g) => `
+    <h2 class="rubrik ${g.id !== 'boost' ? 'tf-' + esc(g.id) : ''}">${esc(g.name)}</h2>
+    <div class="wortwolke">${g.woerter.map((w) => `<button type="button" class="wort" data-f-nur-stichwort="${esc(w.wort)}">${esc(w.name)} <span>${w.n}</span></button>`).join('')}</div>`).join('')}`;
 }
 
 // ============ Einstellungen ============
@@ -801,15 +920,46 @@ function aktuellerCluster(el) {
 }
 
 document.addEventListener('click', (ev) => {
-  const ziel = ev.target.closest('[data-act], [data-zeitraum], [data-sort], [data-tab], [data-vorlage], [data-suche]');
+  const ziel = ev.target.closest('[data-act], [data-sort], [data-tab], [data-vorlage], [data-f-themenfeld], [data-f-zeitraum], [data-f-relevanz], [data-f-sort], [data-f-quelle], [data-f-stichwort], [data-f-entfernen], [data-f-nur-stichwort], [data-f-nur-themenfeld]');
   if (!ziel) return;
   const act = ziel.dataset.act;
+  const d = ziel.dataset;
+  const filterGeaendert = () => { speichereFilter(); render({ scroll: false }); sheetZeichnen(); };
 
-  if (ziel.dataset.zeitraum) { filter.zeitraum = ziel.dataset.zeitraum; speichereFilter(); render({ scroll: false }); return; }
-  if ('sort' in ziel.dataset) { filter.sortierung = filter.sortierung === 'neueste' ? 'relevanz' : 'neueste'; speichereFilter(); render({ scroll: false }); return; }
+  // --- Filter ---
+  if ('fThemenfeld' in d) { filter.themenfeld = filter.themenfeld === d.fThemenfeld && ziel.classList.contains('ressort') ? '' : d.fThemenfeld; if (route().seite) location.hash = '#/'; filterGeaendert(); return; }
+  if ('fZeitraum' in d) { filter.zeitraum = d.fZeitraum; filterGeaendert(); return; }
+  if ('fRelevanz' in d) { filter.relevanz = d.fRelevanz; filterGeaendert(); return; }
+  if ('fSort' in d) { filter.sortierung = d.fSort; filterGeaendert(); return; }
+  if ('fQuelle' in d) { filter.quelle = d.fQuelle; filterGeaendert(); return; }
+  if ('fStichwort' in d) {
+    const w = d.fStichwort;
+    filter.stichwoerter = filter.stichwoerter.includes(w) ? filter.stichwoerter.filter((x) => x !== w) : [...filter.stichwoerter, w];
+    filterGeaendert(); return;
+  }
+  if ('fEntfernen' in d) {
+    const k = d.fEntfernen;
+    if (k === 'zeitraum') filter.zeitraum = '7';
+    else if (k === 'relevanz') filter.relevanz = '';
+    else if (k === 'quelle') filter.quelle = '';
+    else if (k === 'gelesen') filter.ohneGelesene = false;
+    else if (k.startsWith('stichwort:')) filter.stichwoerter = filter.stichwoerter.filter((x) => x !== k.slice(10));
+    filterGeaendert(); return;
+  }
+  if ('fNurStichwort' in d || 'fNurThemenfeld' in d) {
+    Object.assign(filter, { ...STANDARD_FILTER, sortierung: filter.sortierung, stichwoerter: [] });
+    if ('fNurStichwort' in d) filter.stichwoerter = [d.fNurStichwort];
+    else filter.themenfeld = d.fNurThemenfeld;
+    speichereFilter();
+    location.hash = '#/';
+    return;
+  }
+  if ('sort' in d) { filter.sortierung = filter.sortierung === 'neueste' ? 'relevanz' : 'neueste'; filterGeaendert(); return; }
+  if (act === 'sheet-auf') { sheetAuf(); return; }
+  if (act === 'sheet-zu') { sheetZu(); return; }
+  if (act === 'filter-reset') { Object.assign(filter, { ...STANDARD_FILTER, stichwoerter: [] }); filterGeaendert(); return; }
   if (ziel.dataset.tab) { S.detailTab = ziel.dataset.tab; render({ scroll: false }); return; }
   if (ziel.dataset.vorlage) { S.vorlageId = ziel.dataset.vorlage; render({ scroll: false }); return; }
-  if (ziel.dataset.suche) { filter.suche = ziel.dataset.suche; filter.zeitraum = '7'; location.hash = '#/'; return; }
 
   const c = aktuellerCluster(ziel);
   switch (act) {
@@ -898,7 +1048,7 @@ document.addEventListener('change', (ev) => {
   const t = ev.target;
   const map = { 'f-themenfeld': 'themenfeld', 'f-relevanz': 'relevanz', 'f-quelle': 'quelle' };
   if (map[t.id]) { filter[map[t.id]] = t.value; speichereFilter(); render({ scroll: false }); }
-  else if (t.id === 'f-gelesen') { filter.ohneGelesene = t.checked; speichereFilter(); render({ scroll: false }); }
+  else if (t.id === 'f-gelesen') { filter.ohneGelesene = t.checked; speichereFilter(); render({ scroll: false }); sheetZeichnen(); }
   else if (t.id === 'import-datei' && t.files[0]) importDaten(t.files[0]);
 });
 
@@ -949,7 +1099,10 @@ document.addEventListener('submit', (ev) => {
   }
 });
 
+document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') sheetZu(); });
+
 window.addEventListener('hashchange', () => {
+  sheetZu();
   if (route().seite === 'm') { S.detailTab = 'beitrag'; S.vorlageId = null; }
   render();
 });
